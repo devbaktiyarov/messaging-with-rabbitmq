@@ -1,4 +1,4 @@
-package com.devbaktiyarov.exchange.direct;
+package com.devbaktiyarov.exchange;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -8,7 +8,7 @@ import com.rabbitmq.client.DeliverCallback;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class DirectConsumer {
+public class ConsumerExchange {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         try (Connection connection = connectionFactory.newConnection(); Channel channel = connection.createChannel()) {
